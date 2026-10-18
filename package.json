@@ -1,0 +1,16 @@
+{
+  "name": "smugglecheck",
+  "version": "0.1.2",
+  "private": true,
+  "description": "Find hidden prompt-injection text and deceptive Unicode: ASCII smuggling, zero-width and variation-selector stego, bidi, homoglyphs, chat-template tokens, image exfiltration links. JSON API and remote MCP server.",
+  "type": "module",
+  "scripts": {
+    "upload:prod": "npx wrangler@4 versions upload --env production",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT AND Unicode-3.0"
+}

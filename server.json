@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.workers.mike-tusa.smugglecheck/smugglecheck",
+  "title": "SmuggleCheck",
+  "description": "Find hidden prompt-injection text: ASCII smuggling, zero-width/emoji stego, bidi, homoglyphs.",
+  "version": "0.1.2",
+  "websiteUrl": "https://smugglecheck.mike-tusa.workers.dev/",
+  "icons": [
+    { "src": "https://smugglecheck.mike-tusa.workers.dev/favicon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://smugglecheck.mike-tusa.workers.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer sc_live_…' free key (POST /api/keys, no sign-up) for a monthly quota of your own. Works without a key.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
