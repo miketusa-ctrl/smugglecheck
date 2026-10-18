@@ -14,13 +14,26 @@ SmuggleCheck is not affiliated with, endorsed or sponsored by Meta, OpenAI, Anth
 
 SmuggleCheck is a remote MCP server (Streamable HTTP) at `https://smugglecheck.mike-tusa.workers.dev/mcp`. Tools: `scan_text`, `compare_strings`.
 
-Cursor, Cline and Windsurf accept this config:
+Cursor and Windsurf accept this config:
 
 ```json
 {
   "mcpServers": {
     "smugglecheck": {
       "type": "http",
+      "url": "https://smugglecheck.mike-tusa.workers.dev/mcp"
+    }
+  }
+}
+```
+
+Cline (MCP Servers > Remote Servers, or `cline_mcp_settings.json`) needs `"type": "streamableHttp"`:
+
+```json
+{
+  "mcpServers": {
+    "smugglecheck": {
+      "type": "streamableHttp",
       "url": "https://smugglecheck.mike-tusa.workers.dev/mcp"
     }
   }
